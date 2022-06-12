@@ -4,8 +4,13 @@ import Post from "./containers/Post";
 import LayoutFrame from "./containers/LayoutFrame/LayoutFrame";
 import PostLists from "./containers/PostLists";
 import Posts from "./containers/Posts";
+import { Navigate } from "react-router-dom";
 
 const routes = [
+	{
+		path: "/",
+		element: <Navigate to="/home"/>,
+	},
 	{
 		path: "/lay",
 		element: <LayoutFrame />,
@@ -38,7 +43,7 @@ const routes = [
 		element: <Home />,
 	},
 	{
-		path: "/post",
+		path: "/post/:slug",
 		element: <Post />,
 	},
 	{
