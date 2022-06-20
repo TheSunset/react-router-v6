@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { RouteObjectContext } from "../../RouteObjectContext";
 
 function Test(props) {
+  console.log("Test")
   const route = useContext(RouteObjectContext);
-  console.log('route')
   return (
     <div>{route && route.meta && route.meta.name}</div>
   )

@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 
 function Home() {
+  console.log('Home');
   return (
     <div style={{ padding: 20 }}>
       <h2>Home View</h2>

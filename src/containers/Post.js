@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { useLocation, useParams, Route } from "react-router-dom";
 
 function Post() {
+  console.log('Post');
   const BlogPosts = {
     "1": {
       title: "第一篇博客文章",
