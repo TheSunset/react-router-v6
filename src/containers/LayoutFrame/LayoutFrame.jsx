@@ -30,11 +30,13 @@ import Test from "./Test";
 
 const { Header, Sider, Content } = Layout;
 function LayoutFrame() {
+	console.log("LayoutFrame top");
 	const [collapsed, setCollapsed] = useState(false);
 	const [routeObj, setRouteObj] = useState(null);
 	const location = useLocation();
 	const params = useParams();
 	const [searchParams, setSearchParams] = useSearchParams();
+	const [count, setCount] = useState(100);
 
 	useEffect(() => {
 		let match = matchRoutes(routeConfig, location.pathname);
@@ -122,6 +124,7 @@ function LayoutFrame() {
 					>
 						<Outlet></Outlet>
 					</Content>
+					<div onClick={() => setCount(count + 1)}>{count}</div>
 				</Layout>
 			</Layout>
 		</RouteObjectContext.Provider>

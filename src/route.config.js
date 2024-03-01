@@ -18,6 +18,7 @@ const routes = [
 			{
 				path: "home",
 				element: <Home />,
+				// 这里的meta数据如果在路由组件内获取，还是需要用react的context方式去注入。根据location变化动态更新
         meta: {
           name: "主页"
         }
