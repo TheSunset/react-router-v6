@@ -38,7 +38,8 @@ function App() {
   );
 }
 
-// 以上三种方案类似 vue 的Router配置，需要插槽组件<Outlet>(类似vue的 router-view组件)
+// 以上三种方案类似 vue 的Router配置，需要插槽组件<Outlet>(类似vue的 router-view组件)，<Outlet>来放置子路由组件的渲染
+// 顶级路由不需要在应用根写 <Outlet>，比如 路由配置里的 { path: "/lay" },直接就渲染到  <div className="App">里了。
 
 // 也可以用之前react的路由方式，把Route组件写在 各个组件里，这样就不用<Outlet />组件了
 // 但是如果要匹配子路由需要在上层 写 *
